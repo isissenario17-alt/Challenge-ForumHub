@@ -20,6 +20,16 @@ public class Topico {
     private String autor;
     private String curso;
 
+
+    public Topico(DadosCadastroTopico dados) {
+        this.autor = dados.autor();
+        this.mensagem = dados.mensagem();
+        this.curso = dados.curso();
+        this.titulo = dados.titulo();
+        this.topicoStatus = getTopicoStatus();
+        this.dataCriacao = getDataCriacao();
+    }
+
     public Long getId() {
         return id;
     }
