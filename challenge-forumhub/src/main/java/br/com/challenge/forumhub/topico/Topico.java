@@ -20,6 +20,7 @@ public class Topico {
     private String autor;
     private String curso;
 
+    public Topico(){}
 
     public Topico(DadosCadastroTopico dados) {
         this.autor = dados.autor();
