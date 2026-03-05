@@ -1,6 +1,7 @@
 package br.com.challenge.forumhub.topico;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 
 import java.time.LocalDateTime;
 
@@ -97,5 +98,12 @@ public class Topico {
                 ", topicoStatus=" + topicoStatus +
                 ", autor='" + autor  +
                 ", curso='" + curso;
+    }
+
+    public void atualizarInformacoes(@Valid DadosAtualizacaoTopico dados) {
+        this.titulo = dados.titulo();
+        this.mensagem = dados.mensagem();
+        this.autor = dados.autor();
+        this.curso = dados.curso();
     }
 }
